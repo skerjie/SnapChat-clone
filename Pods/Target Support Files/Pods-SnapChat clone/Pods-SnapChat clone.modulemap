@@ -1,0 +1,6 @@
+framework module Pods_SnapChat_clone {
+  umbrella header "Pods-SnapChat clone-umbrella.h"
+
+  export *
+  module * { export * }
+}
