@@ -19,7 +19,7 @@ class SignInViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    let users = FIRDatabase.database().reference().child("users")
+    //let users = FIRDatabase.database().reference().child("users")
     
   }
   
@@ -35,8 +35,8 @@ class SignInViewController: UIViewController {
           } else {
             print("User created succesfully!")
             
-//            let users = FIRDatabase.database().reference().child("users")
-//            users.child(user!.uid).child("email").setValue(user!.email!)
+            //            let users = FIRDatabase.database().reference().child("users")
+            //            users.child(user!.uid).child("email").setValue(user!.email!)
             
             FIRDatabase.database().reference().child("users").child(user!.uid).child("email").setValue(user!.email!)
             
@@ -47,9 +47,7 @@ class SignInViewController: UIViewController {
         print("Sigmed In succesfully!")
         self.performSegue(withIdentifier: "signInSegue", sender: nil) // переходим на следующий экран в случае успеха
       }
-      
     })
-    
   }
 }
 

@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
+import FirebaseAuth
 
 class SelectUserViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
   
@@ -27,7 +28,7 @@ class SelectUserViewController: UIViewController, UITableViewDelegate, UITableVi
     tableView.dataSource = self
     
     FIRDatabase.database().reference().child("users").observe(FIRDataEventType.childAdded, with: {(snapshot) in
-        print(snapshot)
+      print(snapshot)
       
       let user = User()
       user.email = (snapshot.value as! NSDictionary)["email"] as! String
@@ -51,10 +52,9 @@ class SelectUserViewController: UIViewController, UITableViewDelegate, UITableVi
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let user = usersArray[indexPath.row]
-    let snap = ["from":user.email, "description" : descr,"imageURL" : imageURL, "uuid" : uuid]
+    let snap = ["from":FIRAuth.auth()!.currentUser!.email!, "description" : descr,"imageURL" : imageURL, "uuid" : uuid]
     FIRDatabase.database().reference().child("users").child(user.uid).child("snaps").childByAutoId().setValue(snap)
     
     navigationController!.popToRootViewController(animated: true) // возвращает на начальный контроллер
   }
-  
 }
