@@ -10,6 +10,10 @@
 		EA7BB5D41E075BEDB93D85CA /* Pods_SnapChat_clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F5140F971D9510E5707E25 /* Pods_SnapChat_clone.framework */; };
 		F16E554A1DD128060086D4F0 /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16E55491DD128060086D4F0 /* SnapsViewController.swift */; };
 		F16E554C1DD184F40086D4F0 /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16E554B1DD184F40086D4F0 /* PictureViewController.swift */; };
+		F16E554E1DD26FD70086D4F0 /* SelectUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16E554D1DD26FD70086D4F0 /* SelectUserViewController.swift */; };
+		F16E55501DD3C67A0086D4F0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16E554F1DD3C67A0086D4F0 /* User.swift */; };
+		F16E55541DD4BE670086D4F0 /* Snap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16E55531DD4BE670086D4F0 /* Snap.swift */; };
+		F16E55561DD4C9950086D4F0 /* ViewSnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16E55551DD4C9950086D4F0 /* ViewSnapViewController.swift */; };
 		F185AB651DD1008600DE8310 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F185AB641DD1008600DE8310 /* AppDelegate.swift */; };
 		F185AB671DD1008600DE8310 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F185AB661DD1008600DE8310 /* SignInViewController.swift */; };
 		F185AB6A1DD1008600DE8310 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F185AB681DD1008600DE8310 /* Main.storyboard */; };
@@ -24,6 +28,10 @@
 		B2995683ABDF659B2A5CEFB0 /* Pods-SnapChat clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapChat clone.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapChat clone/Pods-SnapChat clone.release.xcconfig"; sourceTree = "<group>"; };
 		F16E55491DD128060086D4F0 /* SnapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapsViewController.swift; sourceTree = "<group>"; };
 		F16E554B1DD184F40086D4F0 /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
+		F16E554D1DD26FD70086D4F0 /* SelectUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUserViewController.swift; sourceTree = "<group>"; };
+		F16E554F1DD3C67A0086D4F0 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F16E55531DD4BE670086D4F0 /* Snap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snap.swift; sourceTree = "<group>"; };
+		F16E55551DD4C9950086D4F0 /* ViewSnapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewSnapViewController.swift; sourceTree = "<group>"; };
 		F185AB611DD1008600DE8310 /* SnapChat clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SnapChat clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F185AB641DD1008600DE8310 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F185AB661DD1008600DE8310 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +71,27 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F16E55511DD3C6B80086D4F0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F16E554F1DD3C67A0086D4F0 /* User.swift */,
+				F16E55531DD4BE670086D4F0 /* Snap.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		F16E55521DD3C6CB0086D4F0 /* VIewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F185AB661DD1008600DE8310 /* SignInViewController.swift */,
+				F16E55491DD128060086D4F0 /* SnapsViewController.swift */,
+				F16E554B1DD184F40086D4F0 /* PictureViewController.swift */,
+				F16E554D1DD26FD70086D4F0 /* SelectUserViewController.swift */,
+				F16E55551DD4C9950086D4F0 /* ViewSnapViewController.swift */,
+			);
+			name = VIewControllers;
+			sourceTree = "<group>";
+		};
 		F185AB581DD1008500DE8310 = {
 			isa = PBXGroup;
 			children = (
@@ -85,9 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				F185AB641DD1008600DE8310 /* AppDelegate.swift */,
-				F185AB661DD1008600DE8310 /* SignInViewController.swift */,
-				F16E55491DD128060086D4F0 /* SnapsViewController.swift */,
-				F16E554B1DD184F40086D4F0 /* PictureViewController.swift */,
+				F16E55521DD3C6CB0086D4F0 /* VIewControllers */,
+				F16E55511DD3C6B80086D4F0 /* Models */,
 				F185AB681DD1008600DE8310 /* Main.storyboard */,
 				F185AB6B1DD1008600DE8310 /* Assets.xcassets */,
 				F185AB6D1DD1008600DE8310 /* LaunchScreen.storyboard */,
@@ -224,6 +252,10 @@
 			files = (
 				F185AB671DD1008600DE8310 /* SignInViewController.swift in Sources */,
 				F16E554C1DD184F40086D4F0 /* PictureViewController.swift in Sources */,
+				F16E55501DD3C67A0086D4F0 /* User.swift in Sources */,
+				F16E55561DD4C9950086D4F0 /* ViewSnapViewController.swift in Sources */,
+				F16E554E1DD26FD70086D4F0 /* SelectUserViewController.swift in Sources */,
+				F16E55541DD4BE670086D4F0 /* Snap.swift in Sources */,
 				F185AB651DD1008600DE8310 /* AppDelegate.swift in Sources */,
 				F16E554A1DD128060086D4F0 /* SnapsViewController.swift in Sources */,
 			);
